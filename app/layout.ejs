@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <header class="header d-flex justify-content-between align-center flex-warp px-6 py-3">
+  <header data-aos="slide-down" data-aos-duration="300" data-aos-once="true" class="header d-flex justify-content-between align-center flex-warp px-6 py-3">
     <img src="./assets/images/logo-fixie.svg" alt="Logo" class="logo">
     <ul class="menu d-flex justify-content-between align-center flex-wrap">
       <li class="pl-6 font-size-3"><a class="link-primary text-decoration-none" href="#">Product</a></li>
@@ -22,6 +22,11 @@
   <%- contents %>
 
   <script src="./assets/js/all.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

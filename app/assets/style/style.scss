@@ -2,6 +2,122 @@
 @import 'reset';
 @import 'utilities';
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .header {
   border-bottom: 1px solid #121212;
+}
+
+.news .item {
+  width: 32%;
+}
+
+.banner {
+  height: 640px;
+  background-image: url(../images/img4.jpg);
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-size: cover;
+  position: relative;
+  
+  .item {
+    position: absolute;
+    bottom: 77px;
+    background: #fff;
+  }
+}
+
+.photo-wall {
+  .img-1 {
+    height: 100vh;
+    background-attachment: fixed;
+    background-image: url(../images/img1.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+  }
+  .img-2 {
+    height: 100vh;
+    background-attachment: fixed;
+    background-image: url(../images/img2.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+  }
+  .img-3 {
+    height: 100vh;
+    background-attachment: fixed;
+    background-image: url(../images/img3.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+  }
+  .item {
+    position: relative;
+    .read-more {
+      position: absolute;
+      top: 50%;
+      left: 42.65%;
+      z-index: 2;
+      p {
+        background-color: #121212;
+        color: #F1F5F6;
+      }
+      a {
+        display: block;
+        background-color: #F1F5F6;
+        color: #121212;
+      }
+    }
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+      .read-more p {
+        background-color: #F1F5F6;
+        color: #121212;
+      }
+      .read-more a {
+        display: block;
+        background-color: #121212;
+        color: #F1F5F6;
+      }
+    }
+  }
+  &-photo, &-text {
+    width: 50%;
+  }
+  &-photo {
+    position: relative;
+    .player {
+      position: absolute;
+      bottom: 0;
+      background-color: #fff;
+    }
+  }
+  &-text {
+    position: relative;
+    .text-body-1 {
+      position: absolute;
+      top: 15%;
+      left: 12%;
+    }
+    .text-body-2 h2 {
+      position: absolute;
+      left: 10%;
+    }
+    .text-body-2 p {
+      position: absolute;
+      top: 10%;
+      left: 10%;
+    }
+    .text-body-3 h2 {
+      position: absolute;
+      left: 50%;
+      top: 25%;
+    }
+    .text-body-3 p {
+      position: absolute;
+      right: 10%;
+      bottom: 10%;
+    }
+  }
 }
